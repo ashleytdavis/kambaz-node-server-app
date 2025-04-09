@@ -8,7 +8,6 @@ export default function AssignmentRoutes(app) {
             if (!assignments || assignments.length === 0) {
                 return res.status(404).send({ message: "No assignments found for this course" });
             }
-            console.log(assignments);
             return res.send(assignments);
         }
         const assignments = await assignmentsDao.findAllAssignments();
